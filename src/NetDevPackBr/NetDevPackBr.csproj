@@ -15,18 +15,19 @@
     <Authors>EduardoPires</Authors>
     <RepositoryType>Public</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
-
-  <ItemGroup>
-    <PackageReference Include="NetDevPack" Version="1.0.0" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\..\img\IconBR.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="NetDevPack" Version="1.0.3" />
   </ItemGroup>
 </Project>
