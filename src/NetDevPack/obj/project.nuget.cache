@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "1FAbRqN/iRsU4uEmSHiKsjhb2CRCIHiOlls9W2vcK+LBpCyHZ6AcC2PkAHxEfj7VH4Y4qmQORUeVCEM3UEW21A==",
+  "success": true,
+  "projectFilePath": "C:\\Projetos\\NetDevPack\\src\\NetDevPack\\NetDevPack.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\conta\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
+    "C:\\Users\\conta\\.nuget\\packages\\mediatr\\8.0.1\\mediatr.8.0.1.nupkg.sha512",
+    "C:\\Users\\conta\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\conta\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\conta\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+C:\Projetos\NetDevPack\src\NetDevPackBr\obj\Debug\netstandard2.0\NetDevPackBr.csprojAssemblyReference.cache
+C:\Projetos\NetDevPack\src\NetDevPackBr\obj\Debug\netstandard2.0\NetDevPackBr.csproj.CoreCompileInputs.cache
+C:\Projetos\NetDevPack\src\NetDevPackBr\obj\Debug\netstandard2.0\NetDevPackBr.AssemblyInfoInputs.cache
+C:\Projetos\NetDevPack\src\NetDevPackBr\obj\Debug\netstandard2.0\NetDevPackBr.AssemblyInfo.cs
+C:\Projetos\NetDevPack\src\NetDevPackBr\bin\Debug\netstandard2.0\NetDevPackBr.deps.json
+C:\Projetos\NetDevPack\src\NetDevPackBr\bin\Debug\netstandard2.0\NetDevPackBr.dll
+C:\Projetos\NetDevPack\src\NetDevPackBr\bin\Debug\netstandard2.0\NetDevPackBr.pdb
+C:\Projetos\NetDevPack\src\NetDevPackBr\bin\Debug\netstandard2.0\NetDevPack.dll
+C:\Projetos\NetDevPack\src\NetDevPackBr\bin\Debug\netstandard2.0\NetDevPack.pdb
+C:\Projetos\NetDevPack\src\NetDevPackBr\obj\Debug\netstandard2.0\NetDevPackBr.csproj.CopyComplete
+C:\Projetos\NetDevPack\src\NetDevPackBr\obj\Debug\netstandard2.0\NetDevPackBr.dll
+C:\Projetos\NetDevPack\src\NetDevPackBr\obj\Debug\netstandard2.0\NetDevPackBr.pdb
