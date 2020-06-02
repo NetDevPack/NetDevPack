@@ -1,2 +1,0 @@
-# NetDevPack
-NetDevPack
