@@ -1,9 +1,0 @@
-C:\Projetos\NetDevPack\src\NetDevPack\bin\Debug\netstandard2.0\NetDevPack.deps.json
-C:\Projetos\NetDevPack\src\NetDevPack\bin\Debug\netstandard2.0\NetDevPack.dll
-C:\Projetos\NetDevPack\src\NetDevPack\bin\Debug\netstandard2.0\NetDevPack.pdb
-C:\Projetos\NetDevPack\src\NetDevPack\obj\Debug\netstandard2.0\NetDevPack.csprojAssemblyReference.cache
-C:\Projetos\NetDevPack\src\NetDevPack\obj\Debug\netstandard2.0\NetDevPack.csproj.CoreCompileInputs.cache
-C:\Projetos\NetDevPack\src\NetDevPack\obj\Debug\netstandard2.0\NetDevPack.AssemblyInfoInputs.cache
-C:\Projetos\NetDevPack\src\NetDevPack\obj\Debug\netstandard2.0\NetDevPack.AssemblyInfo.cs
-C:\Projetos\NetDevPack\src\NetDevPack\obj\Debug\netstandard2.0\NetDevPack.dll
-C:\Projetos\NetDevPack\src\NetDevPack\obj\Debug\netstandard2.0\NetDevPack.pdb
