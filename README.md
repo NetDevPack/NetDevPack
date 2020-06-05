@@ -1,5 +1,5 @@
 
-<img src="https://repository-images.githubusercontent.com/268701472/c363f780-a6c8-11ea-8332-04c289940acd" alt=".NET DevPack" width="300px" />
+<img src="https://repository-images.githubusercontent.com/268701472/8bf84980-a6ce-11ea-83da-e2133c5a3a7a" alt=".NET DevPack" width="300px" />
 
 What is the .NET DevPack?
 =====================
