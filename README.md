@@ -22,6 +22,7 @@ dotnet add package NetDevPack.Identity
 
 ---
 
+| Package |  Version | Popularity |
 | ------- | ----- | ----- |
 | `NetDevPack` | [![NuGet](https://img.shields.io/nuget/v/NetDevPack.svg)](https://nuget.org/packages/NetDevPack) | [![Nuget](https://img.shields.io/nuget/dt/NetDevPack.svg)](https://nuget.org/packages/NetDevPack) |
 | `NetDevPack.Identity` | [![NuGet](https://img.shields.io/nuget/v/NetDevPack.Identity.svg)](https://nuget.org/packages/NetDevPack.Identity) | [![Nuget](https://img.shields.io/nuget/dt/NetDevPack.Identity.svg)](https://nuget.org/packages/NetDevPack.Identity)
