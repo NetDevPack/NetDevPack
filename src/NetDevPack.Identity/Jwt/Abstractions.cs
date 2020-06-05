@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,6 +11,9 @@ namespace NetDevPack.Identity.Jwt
     {
         public static IServiceCollection AddJwtConfiguration(this IServiceCollection services, IConfiguration configuration, string appJwtSettingsKey = null)
         {
+            if (services == null) throw new ArgumentException(nameof(services));
+            if (configuration == null) throw new ArgumentException(nameof(configuration));
+
             var appSettingsSection = configuration.GetSection(appJwtSettingsKey ?? "AppJwtSettings");
             services.Configure<AppJwtSettings>(appSettingsSection);
 

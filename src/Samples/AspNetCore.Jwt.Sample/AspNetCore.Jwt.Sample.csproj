@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\NetDevPack.Identity.Jwt\NetDevPack.Identity.csproj" />
+    <ProjectReference Include="..\..\NetDevPack.Identity\NetDevPack.Identity.csproj" />
     <ProjectReference Include="..\..\NetDevPack\NetDevPack.csproj" />
   </ItemGroup>
 

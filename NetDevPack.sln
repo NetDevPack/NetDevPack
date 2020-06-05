@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetDevPack", "src\NetDevPac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetDevPackBr", "src\NetDevPackBr\NetDevPackBr.csproj", "{03A67078-FA6A-4D38-AB9A-52B56647AA60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPack.Identity", "src\NetDevPack.Identity.Jwt\NetDevPack.Identity.csproj", "{BE26E955-226B-4F04-92BD-56B588FCFBAB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPack.Identity", "src\NetDevPack.Identity\NetDevPack.Identity.csproj", "{BE26E955-226B-4F04-92BD-56B588FCFBAB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{0DF90FE2-7D71-4774-8DAC-FC7132D99089}"
 EndProject

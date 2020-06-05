@@ -21,18 +21,20 @@ namespace NetDevPack.Identity.Jwt
 
         public JwtBuilder WithUserManager(UserManager<IdentityUser> userManager)
         {
-            _userManager = userManager ?? throw new ArgumentException("The UserManager cannot be null");
+            _userManager = userManager ?? throw new ArgumentException(nameof(userManager));
             return this;
         }
 
         public JwtBuilder WithJwtSettings(AppJwtSettings appJwtSettings)
         {
-            _appJwtSettings = appJwtSettings ?? throw new ArgumentException("The AppJwtSettings cannot be null");
+            _appJwtSettings = appJwtSettings ?? throw new ArgumentException(nameof(appJwtSettings));
             return this;
         }
 
         public JwtBuilder WithEmail(string email)
         {
+            if(string.IsNullOrEmpty(email)) throw new ArgumentException(nameof(email));
+
             _user = _userManager.FindByEmailAsync(email).Result;
             _userClaims = new List<Claim>();
             _jwtClaims = new List<Claim>();
@@ -56,15 +58,16 @@ namespace NetDevPack.Identity.Jwt
 
         public JwtBuilder WithUserClaims()
         {
-            var userRoles = _userManager.GetRolesAsync(_user).Result;
             _userClaims = _userManager.GetClaimsAsync(_user).Result;
-
-            foreach (var userRole in userRoles)
-            {
-                _userClaims.Add(new Claim("role", userRole));
-            }
-
             _identityClaims.AddClaims(_userClaims);
+
+            return this;
+        }
+
+        public JwtBuilder WithUserRoles()
+        {
+            var userRoles = _userManager.GetRolesAsync(_user).Result;
+            userRoles.ToList().ForEach(r=> _identityClaims.AddClaim(new Claim("role", r)));
 
             return this;
         }

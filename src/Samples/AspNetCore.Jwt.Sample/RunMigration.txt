@@ -1,3 +1,2 @@
 dotnet ef migrations add Initial --project src\Samples\AspNetCore.Jwt.Sample\AspNetCore.Jwt.Sample.csproj
-
 dotnet ef database update --project src\Samples\AspNetCore.Jwt.Sample\AspNetCore.Jwt.Sample.csproj

@@ -87,6 +87,7 @@ namespace AspNetCore.Jwt.Sample.Controllers
                 .WithEmail(email)
                 .WithJwtClaims()
                 .WithUserClaims()
+                .WithUserRoles()
                 .BuildUserResponse();
         }
 
@@ -98,6 +99,7 @@ namespace AspNetCore.Jwt.Sample.Controllers
                 .WithEmail(email)
                 .WithJwtClaims()
                 .WithUserClaims()
+                .WithUserRoles()
                 .BuildToken();
         }
 

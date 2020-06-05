@@ -23,10 +23,9 @@ namespace AspNetCore.Jwt.Sample
             services.AddControllers();
 
             // Adding all identity configurations
-            services.AddIdentityEntityFrameworkContextConfiguration(Configuration, 
-                    GetType().Namespace, "DefaultConnection")
-                    .AddJwtConfiguration(Configuration, "AppSettings")
-                    .AddIdentityConfiguration();  // <== This extension returns IdentityBuilder to extends configuration
+            services.AddIdentityEntityFrameworkContextConfiguration(Configuration, GetType().Namespace,"DefaultConnection");
+            services.AddJwtConfiguration(Configuration, "AppSettings");
+            services.AddIdentityConfiguration();  // <== This extension returns IdentityBuilder to extends configuration
 
             services.AddSwaggerConfiguration();
         }

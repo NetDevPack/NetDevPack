@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace NetDevPack.Identity.Authorization
 {
-    public class RequerimentClaimFilter : IAuthorizationFilter
+    internal class RequerimentClaimFilter : IAuthorizationFilter
     {
         private readonly Claim _claim;
 
@@ -21,7 +21,7 @@ namespace NetDevPack.Identity.Authorization
                 return;
             }
 
-            if (!CustomAuthorization.UserHasValidClaim(context.HttpContext, _claim.Type, _claim.Value))
+            if (!CustomAuthorizationValidation.UserHasValidClaim(context.HttpContext, _claim.Type, _claim.Value))
             {
                 context.Result = new StatusCodeResult(403);
             }
