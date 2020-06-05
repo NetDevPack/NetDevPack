@@ -8,9 +8,7 @@ A smart set of common classes and implementations to improve your development pr
 ## Give a Star! :star:
 If you liked the project or if NetDevPack helped you, please give a star ;)
 
----
-
-### Get Started
+## Get Started
 .NET DevPack can be installed using the Nuget package manager or the `dotnet` CLI.
 
 ```
@@ -23,7 +21,7 @@ dotnet add package NetDevPack.Identity
 ```
 
 ---
-|         |       |       |
+
 | ------- | ----- | ----- |
 | `NetDevPack` | [![NuGet](https://img.shields.io/nuget/v/NetDevPack.svg)](https://nuget.org/packages/NetDevPack) | [![Nuget](https://img.shields.io/nuget/dt/NetDevPack.svg)](https://nuget.org/packages/NetDevPack) |
 | `NetDevPack.Identity` | [![NuGet](https://img.shields.io/nuget/v/NetDevPack.Identity.svg)](https://nuget.org/packages/NetDevPack.Identity) | [![Nuget](https://img.shields.io/nuget/dt/NetDevPack.Identity.svg)](https://nuget.org/packages/NetDevPack.Identity)
