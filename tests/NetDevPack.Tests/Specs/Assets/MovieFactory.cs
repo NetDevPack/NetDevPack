@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace NetDevPack.Tests.Specs
 {
-    public class MovieFactory
+    public static class MovieFactory
     {
         public static Movie GetForKids()
         {
-            return new Movie("",DateTime.Now, MpaaRating.G,"",1,new Director(""));
+            return GetMixedMovies().FirstOrDefault(m=>m.MpaaRating <= MpaaRating.PG);
         }
 
         public static Movie GetRatedR()
         {
-            return new Movie("", DateTime.Now, MpaaRating.R, "", 1, new Director(""));
+            return GetMixedMovies().FirstOrDefault(m => m.MpaaRating == MpaaRating.R);
         }
        
         public static List<Movie> GetMixedMovies()
