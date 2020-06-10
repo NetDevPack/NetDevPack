@@ -27,7 +27,7 @@ namespace NetDevPack.Messaging
 
         protected async Task<ValidationResult> Commit(IUnitOfWork uow)
         {
-            return await Commit(uow, "There was an error saving data");
+            return await Commit(uow, "There was an error saving data").ConfigureAwait(false);
         }
     }
 }
