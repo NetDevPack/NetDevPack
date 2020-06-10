@@ -9,7 +9,7 @@ namespace NetDevPack.Tests.Specs
     {
         [Fact(DisplayName = "SingleSpecification ReturnTrue")]
         [Trait("Category", "Specification Tests")]
-        public void Movie_SingleSpecification_ShouldReturnTrue()
+        public void Specification_SingleSpecification_ShouldReturnTrue()
         {
             // Arrange
             var movie = MovieFactory.GetForKids();
@@ -25,7 +25,7 @@ namespace NetDevPack.Tests.Specs
 
         [Fact(DisplayName = "SingleSpecification ReturnFalse")]
         [Trait("Category", "Specification Tests")]
-        public void Movie_SingleSpecification_ShouldReturnFalse()
+        public void Specification_SingleSpecification_ShouldReturnFalse()
         {
             // Arrange
             var movie = MovieFactory.GetRatedR();
@@ -41,7 +41,7 @@ namespace NetDevPack.Tests.Specs
 
         [Fact(DisplayName = "AndSpecification")]
         [Trait("Category", "Specification Tests")]
-        public void Movie_AndSpecification_ShouldReturnTrue()
+        public void Specification_AndSpecification_ShouldReturnTrue()
         {
             // Arrange
             var movie = MovieFactory.GetMixedMovies().FirstOrDefault(m =>
@@ -63,7 +63,7 @@ namespace NetDevPack.Tests.Specs
 
         [Fact(DisplayName = "OrSpecification")]
         [Trait("Category", "Specification Tests")]
-        public void Movie_OrSpecification_ShouldFilterMovies()
+        public void Specification_OrSpecification_ShouldFilterMovies()
         {
             // Arrange
             var movieCount = MovieFactory.GetMixedMovies().Count(m => m.MpaaRating <= MpaaRating.PG || m.Rating >= 4);
@@ -82,7 +82,7 @@ namespace NetDevPack.Tests.Specs
 
         [Fact(DisplayName = "NotSpecification")]
         [Trait("Category", "Specification Tests")]
-        public void Movie_NotSpecification_ShouldFilterMovies()
+        public void Specification_NotSpecification_ShouldFilterMovies()
         {
             // Arrange
             var movieCount = MovieFactory.GetMixedMovies().Count(m => m.MpaaRating > MpaaRating.PG && m.Rating >= 4);
@@ -101,7 +101,7 @@ namespace NetDevPack.Tests.Specs
 
         [Fact(DisplayName = "GenericSpecification")]
         [Trait("Category", "Specification Tests")]
-        public void Movie_GenericSpecification_ShouldReturnTrue()
+        public void Specification_GenericSpecification_ShouldReturnTrue()
         {
             // Arrange
             var movie = MovieFactory.GetMixedMovies().FirstOrDefault(m => m.MpaaRating > MpaaRating.PG && m.Rating >= 4);
