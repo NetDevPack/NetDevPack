@@ -1,5 +1,4 @@
-
-<img src="https://raw.githubusercontent.com/EduardoPires/NetDevPack/master/img/IconGHReadME.png" alt=".NET DevPack" width="300px" />
+<img src="https://repository-images.githubusercontent.com/268701472/8bf84980-a6ce-11ea-83da-e2133c5a3a7a" alt=".NET DevPack" width="300px" />
 
 What is the .NET DevPack?
 =====================
@@ -14,28 +13,14 @@ If you liked the project or if NetDevPack helped you, please give a star ;)
 ```
 dotnet add package NetDevPack
 ```
-
-For ASP.NET Core Identity Pack:
-```
-dotnet add package NetDevPack.Identity
-```
-
 ---
 
 | Package |  Version | Popularity |
 | ------- | ----- | ----- |
 | `NetDevPack` | [![NuGet](https://img.shields.io/nuget/v/NetDevPack.svg)](https://nuget.org/packages/NetDevPack) | [![Nuget](https://img.shields.io/nuget/dt/NetDevPack.svg)](https://nuget.org/packages/NetDevPack) |
-| `NetDevPack.Identity` | [![NuGet](https://img.shields.io/nuget/v/NetDevPack.Identity.svg)](https://nuget.org/packages/NetDevPack.Identity) | [![Nuget](https://img.shields.io/nuget/dt/NetDevPack.Identity.svg)](https://nuget.org/packages/NetDevPack.Identity)
-| `NetDevPackBr` | [![NuGet](https://img.shields.io/nuget/v/NetDevPackBr.svg)](https://nuget.org/packages/NetDevPackBr) | [![Nuget](https://img.shields.io/nuget/dt/NetDevPackBr.svg)](https://nuget.org/packages/NetDevPackBr)
-
 
 ### Examples
-- Coming soon.
-
-### Documentation
-
-- Coming soon.
-
+- The sample application that uses the features will be available soon. In the meantime, explore the code to understand what it covers. 
 
 ## About
 .NET DevPack was developed by [Eduardo Pires](http://eduardopires.net.br) under the [MIT license](LICENSE).
