@@ -4,10 +4,16 @@ dotnet_csproj:
   patch: true
   file: '**\*.csproj'
   version: '{version}'
+  version_prefix: '{version}'
   package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
 before_build:
 - cmd: >-
     dotnet restore
+
+
     dotnet build
 build:
   verbosity: minimal
