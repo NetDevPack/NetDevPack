@@ -22,7 +22,7 @@ namespace NetDevPack.Domain
             _domainEvents.Add(domainEvent);
         }
 
-        public void RemoverEvento(Event domainEvent)
+        public void RemoveDomainEvent(Event domainEvent)
         {
             _domainEvents?.Remove(domainEvent);
         }
