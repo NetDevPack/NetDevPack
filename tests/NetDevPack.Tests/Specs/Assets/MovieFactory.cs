@@ -24,7 +24,8 @@ namespace NetDevPack.Tests.Specs
                 new Movie("The Godfather", new DateTime(1972, 01, 01), MpaaRating.R, "Drama", 5, new Director("Francis Ford Coppola")),
                 new Movie("Scarface", new DateTime(1983, 07, 04), MpaaRating.R, "Action", 5, new Director("Brian De Palma")),
                 new Movie("The Hobbit: The Battle of the Five Armies ", new DateTime(2014, 07, 04), MpaaRating.PG13, "Adventure", 4, new Director("Peter Jackson")),
-                new Movie("Alone in the Dark ", new DateTime(2005, 07, 04), MpaaRating.R, "Horror", 1, new Director("Uwe Boll"))
+                new Movie("Alone in the Dark", new DateTime(2005, 07, 04), MpaaRating.R, "Horror", 1, new Director("Uwe Boll")),
+                new Movie("Scoob!", new DateTime(2020, 05, 15), MpaaRating.G, "Animation", 5, new Director("Matt Lieberman"))
             };
         }
     }

@@ -45,7 +45,9 @@ namespace NetDevPack.Tests.Specs
         {
             // Arrange
             var movie = MovieFactory.GetMixedMovies().FirstOrDefault(m =>
-                m.MpaaRating <= MpaaRating.PG && m.ReleaseDate.Year < DateTime.Now.Year);
+                m.MpaaRating <= MpaaRating.PG &&            // For kids
+                m.ReleaseDate.Year < DateTime.Now.Year);    // Last year or older
+
             var director = movie.Director.Name;
 
             var kidSpec = new MovieForKidsSpecification();
@@ -66,7 +68,9 @@ namespace NetDevPack.Tests.Specs
         public void Specification_OrSpecification_ShouldFilterMovies()
         {
             // Arrange
-            var movieCount = MovieFactory.GetMixedMovies().Count(m => m.MpaaRating <= MpaaRating.PG || m.Rating >= 4);
+            var movieCount = MovieFactory.GetMixedMovies().Count(m => 
+                m.MpaaRating <= MpaaRating.PG ||    // For kids OR
+                m.Rating >= 4);                     // Best Rates
 
             var kidSpec = new MovieForKidsSpecification();
             var dirBest = new BestRatedFilmsSpecification();
@@ -85,7 +89,9 @@ namespace NetDevPack.Tests.Specs
         public void Specification_NotSpecification_ShouldFilterMovies()
         {
             // Arrange
-            var movieCount = MovieFactory.GetMixedMovies().Count(m => m.MpaaRating > MpaaRating.PG && m.Rating >= 4);
+            var movieCount = MovieFactory.GetMixedMovies().Count(m => 
+                m.MpaaRating > MpaaRating.PG &&     // Not for kids
+                m.Rating >= 4);                     // Best ratigs
 
             var kidSpec = new MovieForKidsSpecification();
             var dirBest = new BestRatedFilmsSpecification();
@@ -104,8 +110,13 @@ namespace NetDevPack.Tests.Specs
         public void Specification_GenericSpecification_ShouldReturnTrue()
         {
             // Arrange
-            var movie = MovieFactory.GetMixedMovies().FirstOrDefault(m => m.MpaaRating > MpaaRating.PG && m.Rating >= 4);
-            var genSpec = new GenericSpecification<Movie>(m => m.MpaaRating > MpaaRating.PG && m.Rating >= 4);
+            var movie = MovieFactory.GetMixedMovies().FirstOrDefault(m => 
+                m.MpaaRating > MpaaRating.PG &&     // Not for kids
+                m.Rating >= 4);                     // Best ratigs
+            
+            var genSpec = new GenericSpecification<Movie>(m => 
+                m.MpaaRating > MpaaRating.PG && 
+                m.Rating >= 4);
             
             // Act
             var result = genSpec.IsSatisfiedBy(movie);

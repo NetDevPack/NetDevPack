@@ -5,7 +5,7 @@ namespace NetDevPack.Specification
 {
     public class GenericSpecification<T>
     {
-        public Expression<Func<T, bool>> Expression { get; }
+        private Expression<Func<T, bool>> Expression { get; }
 
         public GenericSpecification(Expression<Func<T, bool>> expression)
         {
