@@ -1,5 +1,10 @@
 <img src="https://repository-images.githubusercontent.com/268701472/8bf84980-a6ce-11ea-83da-e2133c5a3a7a" alt=".NET DevPack" width="300px" />
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/71b250b8bda14d7a9ac2cab122d3f5f9)](https://www.codacy.com/gh/NetDevPack/NetDevPack?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=NetDevPack/NetDevPack&amp;utm_campaign=Badge_Grade)
+[![Build status](https://ci.appveyor.com/api/projects/status/588ik5m35ulflqxk?svg=true)](https://ci.appveyor.com/project/EduardoPires/netdevpack)
+![.NET Core](https://github.com/NetDevPack/NetDevPack/workflows/.NET%20Core/badge.svg)
+[![License](http://img.shields.io/github/license/NetDevPack/NetDevPack.svg)](LICENSE)
+
 What is the .NET DevPack?
 =====================
 A smart set of common classes and implementations to improve your development productivity.
