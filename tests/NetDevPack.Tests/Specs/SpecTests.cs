@@ -52,7 +52,7 @@ namespace NetDevPack.Tests.Specs
 
             var kidSpec = new MovieForKidsSpecification();
             var dirSpec = new MovieDirectedBySpecification(director);
-            var dvdSpec = new AvailableOnDvdSpecification();
+            var dvdSpec = new AvailableOnStreamingSpecification();
 
             var movieSpec = kidSpec.And(dirSpec).And(dvdSpec);
 
