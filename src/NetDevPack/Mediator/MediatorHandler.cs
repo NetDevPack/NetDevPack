@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using FluentValidation.Results;
 using MediatR;
 using NetDevPack.Messaging;
@@ -14,14 +15,16 @@ namespace NetDevPack.Mediator
             _mediator = mediator;
         }
 
-        public virtual async Task<ValidationResult> SendCommand<T>(T command) where T : Command
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public virtual Task<ValidationResult> SendCommand<T>(T command) where T : Command
         {
-            return await _mediator.Send(command);
+            return _mediator.Send(command);
         }
 
-        public virtual async Task PublishEvent<T>(T @event) where T : Event
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public virtual Task PublishEvent<T>(T @event) where T : Event
         {
-            await _mediator.Publish(@event);
+            return _mediator.Publish(@event);
         }
     }
 }
