@@ -15,9 +15,9 @@ namespace NetDevPack.Tests.Specs
                 m.MpaaRating <= MpaaRating.PG &&            // For kids
                 m.ReleaseDate.Year == DateTime.Now.Year &&  // New Release
                 m.Rating >= 4);                             // Best ratings
-            
+
             var newestGoodMoviesForKidsValidation = new NewestGoodMoviesForKidsValidation();
-            
+
             // Act
             var result = newestGoodMoviesForKidsValidation.Validate(movie);
 

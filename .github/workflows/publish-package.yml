@@ -1,0 +1,40 @@
+name: Master - Publish packages
+
+on:
+  push:
+    branches: [ master ]
+
+env:
+  PACKAGE_MAJOR_VERSION: 5
+  PACKAGE_MINOR_VERSION: 0
+  CURRENT_REPO_URL: https://github.com/${{ github.repository }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup .NET 5
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
+
+      - name: Setup .NET Core 3.1
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.x
+
+      - name: Generate version
+        run: echo "PACKAGE_VERSION=$PACKAGE_MAJOR_VERSION.$PACKAGE_MINOR_VERSION.$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
+
+      - name: Generate Package
+        run: dotnet pack -c Release -o out -p:PackageVersion=${{env.PACKAGE_VERSION}} -p:RepositoryUrl=${{env.CURRENT_REPO_URL}}
+
+      - name: Publish the package to nuget.org
+        run: dotnet nuget push ./out/*.nupkg --skip-duplicate --no-symbols true -k ${{ secrets.NUGET_AUTH_TOKEN}} -s https://api.nuget.org/v3/index.json
