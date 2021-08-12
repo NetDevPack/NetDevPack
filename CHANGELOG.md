@@ -1,3 +1,15 @@
+# [5.1.0](https://github.com/NetDevPack/NetDevPack/compare/v5.0.4...v5.1.0) (2021-08-12)
+
+
+### Bug Fixes
+
+* **string:** OnlyNumbers ([3e88af3](https://github.com/NetDevPack/NetDevPack/commit/3e88af3661f02e34203125b6e822975629902ae5)), closes [#15](https://github.com/NetDevPack/NetDevPack/issues/15)
+
+
+### Features
+
+* .net core 2.1 ([5f91a76](https://github.com/NetDevPack/NetDevPack/commit/5f91a765869fe7ec911f223b3f3ddc5f4d3f41bc))
+
 ## [5.0.4](https://github.com/NetDevPack/NetDevPack/compare/v5.0.3...v5.0.4) (2021-08-12)
 
 
