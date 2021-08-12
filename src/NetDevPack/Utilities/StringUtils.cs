@@ -275,5 +275,23 @@ namespace NetDevPack.Utilities
 
         }
 #endif
+
+        public static string OnlyNumbers(this string str)
+        {
+            var onlyNumbers = new char[5];
+            var lastIndex = 0;
+
+            foreach (var c in str)
+            {
+                if (c < '0' || c > '9') continue;
+
+                if (onlyNumbers.Length == lastIndex)
+                    Array.Resize<char>(ref onlyNumbers, lastIndex + 5);
+
+                onlyNumbers[lastIndex++] = c;
+            }
+            Array.Resize(ref onlyNumbers, onlyNumbers.Length);
+            return new string(onlyNumbers);
+        }
     }
 }
