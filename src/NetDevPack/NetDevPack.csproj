@@ -29,4 +29,12 @@
     </None>
   </ItemGroup>
 
+  <Target Name="CopyHook" AfterTargets="AfterBuild" Condition=" '$(Configuration)' == 'Debug' ">
+    <ItemGroup>
+      <_CustomFiles Include="../../.github/hooks/commit-msg" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_CustomFiles)" DestinationFolder="../../../.git/hooks" />
+  </Target>
+
+
 </Project>
