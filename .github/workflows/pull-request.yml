@@ -1,4 +1,4 @@
-name: Pull Request Analisys
+name: NetDevPack - MASTER PR
 
 on:
   pull_request:
