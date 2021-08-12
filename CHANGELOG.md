@@ -1,3 +1,10 @@
+## [5.0.4](https://github.com/NetDevPack/NetDevPack/compare/v5.0.3...v5.0.4) (2021-08-12)
+
+
+### Bug Fixes
+
+* badge + version ([1377cfc](https://github.com/NetDevPack/NetDevPack/commit/1377cfc37f091e365a2c6bb08e690e1caa9af1d4))
+
 # [1.2.0](https://github.com/NetDevPack/NetDevPack/compare/v1.1.0...v1.2.0) (2021-08-12)
 
 
