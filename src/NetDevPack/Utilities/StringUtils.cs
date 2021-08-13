@@ -290,7 +290,7 @@ namespace NetDevPack.Utilities
 
                 onlyNumbers[lastIndex++] = c;
             }
-            Array.Resize(ref onlyNumbers, onlyNumbers.Length);
+            Array.Resize(ref onlyNumbers, lastIndex);
             return new string(onlyNumbers);
         }
     }

@@ -27,5 +27,14 @@ namespace NetDevPack.Tests.Utilities
         {
             content.Urlize().Should().Be(expected);
         }
+
+        [Theory]
+        [InlineData("86456-221", "86456221")]
+        [InlineData("864aoeuaoeu56-221", "86456221")]
+        [InlineData("#@eee221oeu#@ aoeu a,34", "22134")]
+        public void Should_Only_Get_Numbers(string content, string expected)
+        {
+            content.OnlyNumbers().Should().Be(expected);
+        }
     }
 }
