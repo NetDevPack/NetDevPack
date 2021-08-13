@@ -1,3 +1,10 @@
+## [5.1.1](https://github.com/NetDevPack/NetDevPack/compare/v5.1.0...v5.1.1) (2021-08-13)
+
+
+### Bug Fixes
+
+* **string:** OnlyNumbers bug ([e52746b](https://github.com/NetDevPack/NetDevPack/commit/e52746bbf27613298b609d9f9c132d00bf3c65cf))
+
 # [5.1.0](https://github.com/NetDevPack/NetDevPack/compare/v5.0.4...v5.1.0) (2021-08-12)
 
 
