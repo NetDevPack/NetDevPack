@@ -1,3 +1,10 @@
+# [5.2.0](https://github.com/NetDevPack/NetDevPack/compare/v5.1.1...v5.2.0) (2021-08-19)
+
+
+### Features
+
+* **stringutil:** random string generator ([02ae7c7](https://github.com/NetDevPack/NetDevPack/commit/02ae7c70dd8484f642c042af8d69394679791605))
+
 ## [5.1.1](https://github.com/NetDevPack/NetDevPack/compare/v5.1.0...v5.1.1) (2021-08-13)
 
 
