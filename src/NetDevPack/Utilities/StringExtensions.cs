@@ -224,7 +224,7 @@ namespace NetDevPack.Utilities
                 var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
                 if (unicodeCategory != UnicodeCategory.NonSpacingMark)
                 {
-                    finalText[lastIndex++] = ((char)unicodeCategory);
+                    finalText[lastIndex++] = c;
                 }
             }
             Array.Resize(ref finalText, lastIndex);
