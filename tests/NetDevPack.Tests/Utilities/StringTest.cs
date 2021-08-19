@@ -1,5 +1,6 @@
 ﻿using FluentAssertions;
 using NetDevPack.Utilities;
+using System;
 using Xunit;
 
 namespace NetDevPack.Tests.Utilities
@@ -35,6 +36,14 @@ namespace NetDevPack.Tests.Utilities
         public void Should_Only_Get_Numbers(string content, string expected)
         {
             content.OnlyNumbers().Should().Be(expected);
+        }
+
+        [Fact]
+        public void Should_Generate_Random_String()
+        {
+            var random = new Random(DateTime.Now.Second).Next(100);
+            var data = StringUtils.RandomString(random);
+            data.Should().HaveLength(random);
         }
     }
 }
