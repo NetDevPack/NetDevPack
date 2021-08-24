@@ -9,7 +9,7 @@ env:
   CURRENT_REPO_URL: https://github.com/${{ github.repository }}
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
 
     steps:

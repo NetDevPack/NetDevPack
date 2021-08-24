@@ -5,7 +5,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  pull-request:
     runs-on: ubuntu-latest
 
     steps:
