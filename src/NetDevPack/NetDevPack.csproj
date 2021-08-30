@@ -22,6 +22,10 @@
     <PackageReference Include="mediatr" Version="9.0.0" />
   </ItemGroup>
 
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Memory" Version="4.5.4" />
+  </ItemGroup>
+
   <ItemGroup>
     <None Include="..\..\assets\IconNuget.png">
       <Pack>True</Pack>
