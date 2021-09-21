@@ -6,7 +6,7 @@ namespace NetDevPack.Tests.Domain
     public class ValueObjectTest
     {
         [Theory(DisplayName = "Equals")]
-        [InlineData("Rua Avenida Paulista", "São Paulo", "São Paulo", "Brazil", "17280-000")]
+        [InlineData("Avenida Paulista", "São Paulo", "São Paulo", "Brazil", "17280-000")]
         [Trait("Category", "Domain Tests")]
         public void EqualityTest(string street, string city, string state, string country, string zipcode)
         {
@@ -25,7 +25,7 @@ namespace NetDevPack.Tests.Domain
         public void NonEqualityTest(string street, string city, string state, string country, string zipcode)
         {
             Address address1 = new Address(street, city, state, country, zipcode);
-            Address address2 = new Address("Rua Avenida Paulista",
+            Address address2 = new Address("Avenida Paulista",
                                            "São Paulo",
                                            "São Paulo",
                                            "Brazil",
