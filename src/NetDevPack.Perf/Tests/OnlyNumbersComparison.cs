@@ -7,7 +7,7 @@ namespace NetDevPack.Perf.Tests
     [MemoryDiagnoser, RPlotExporter]
     public class OnlyNumbersComparison
     {
-        const string Data = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        private const string Data = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
         [Benchmark]
         public string OnlyNumbers()
@@ -29,7 +29,7 @@ namespace NetDevPack.Perf.Tests
         }
 
         [Benchmark]
-        public string OnlyNumberNetDevPack() => Data.OnlyNumbers();
+        public string NetDevPackOnlyNumber() => Data.OnlyNumbers();
 
     }
 }
