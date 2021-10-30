@@ -31,6 +31,6 @@ namespace NetDevPack.Perf.Tests
         }
 
         [Benchmark]
-        public string RemoveDiacriticsNetDevPack() => Text.RemoveDiacritics();
+        public string NetDevPackRemoveDiacritics() => Text.RemoveDiacritics();
     }
 }

@@ -10,7 +10,6 @@ namespace NetDevPack.Perf.Tests
         private static Random random = new Random();
         private const int Length = 10;
 
-
         [Benchmark]
         public string RandomString()
         {
