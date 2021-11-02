@@ -10,7 +10,7 @@ namespace NetDevPack.Perf
         {
             BenchmarkRunner.Run<RandomStringComparison>();
             BenchmarkRunner.Run<OnlyNumbersComparison>();
-            BenchmarkRunner.Run<Urlize>();
+            BenchmarkRunner.Run<UrlizeComparison>();
             BenchmarkRunner.Run<RemoveDiatricsComparison>();
         }
     }

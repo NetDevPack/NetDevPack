@@ -1,3 +1,10 @@
+# [5.3.0](https://github.com/NetDevPack/NetDevPack/compare/v5.2.0...v5.3.0) (2021-08-30)
+
+
+### Features
+
+* **string:** plain hex dump style ([6f933a5](https://github.com/NetDevPack/NetDevPack/commit/6f933a5aaf1cdcf613ab4f721bf31d0b622e6f42))
+
 # [5.2.0](https://github.com/NetDevPack/NetDevPack/compare/v5.1.1...v5.2.0) (2021-08-19)
 
 
