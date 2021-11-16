@@ -1,3 +1,10 @@
+## [5.3.2](https://github.com/NetDevPack/NetDevPack/compare/v5.3.1...v5.3.2) (2021-11-16)
+
+
+### Bug Fixes
+
+* **urlize:** do not permit "/" ([2592e73](https://github.com/NetDevPack/NetDevPack/commit/2592e73f02c22cdeaaafd8692a6d62aa6720cfee))
+
 ## [5.3.1](https://github.com/NetDevPack/NetDevPack/compare/v5.3.0...v5.3.1) (2021-11-02)
 
 
