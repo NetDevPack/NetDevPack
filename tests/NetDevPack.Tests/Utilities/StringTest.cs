@@ -24,6 +24,7 @@ namespace NetDevPack.Tests.Utilities
         [InlineData(".net core 5.0 - pacotes", "net-core-5-0-pacotes")]
         [InlineData("Versão do AspNetCore do curso", "versao-do-aspnetcore-do-curso")]
         [InlineData(" Tipo de dado gerado pela configuração HasCloumnType<string> ", "tipo-de-dado-gerado-pela-configuracao-hascloumntype-string")]
+        [InlineData("esse ou/esse?", "esse-ou-esse")]
         public void Should_Urlize(string content, string expected)
         {
             content.Urlize().Should().Be(expected);
