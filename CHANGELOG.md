@@ -1,3 +1,10 @@
+## [5.3.1](https://github.com/NetDevPack/NetDevPack/compare/v5.3.0...v5.3.1) (2021-11-02)
+
+
+### Bug Fixes
+
+* version ([4c85d0d](https://github.com/NetDevPack/NetDevPack/commit/4c85d0d235059bd816907f18c319e47db9300abc))
+
 # [5.3.0](https://github.com/NetDevPack/NetDevPack/compare/v5.2.0...v5.3.0) (2021-08-30)
 
 
