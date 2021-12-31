@@ -46,5 +46,15 @@ namespace NetDevPack.Tests.Utilities
             var data = StringUtils.RandomString(random);
             data.Should().HaveLength(random);
         }
+
+        [Theory]
+        [InlineData("you Shall Not Pass", true, "You shall not pass")]
+        [InlineData("head first C#", false, "Head first C#")]
+        [InlineData("yazılım geliştirmenin temelleri", false, "Yazılım geliştirmenin temelleri")]
+        [InlineData("a", false, "A")]
+        public void Should_Capitalize_String(string content, bool isRestLower, string expected)
+        {
+            content.Capitalize(isRestLower).Should().Be(expected);
+        }
     }
 }

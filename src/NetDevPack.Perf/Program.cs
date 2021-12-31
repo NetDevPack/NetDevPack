@@ -12,6 +12,7 @@ namespace NetDevPack.Perf
             BenchmarkRunner.Run<OnlyNumbersComparison>();
             BenchmarkRunner.Run<UrlizeComparison>();
             BenchmarkRunner.Run<RemoveDiatricsComparison>();
+            BenchmarkRunner.Run<CapitalizeComparison>();
         }
     }
 }
