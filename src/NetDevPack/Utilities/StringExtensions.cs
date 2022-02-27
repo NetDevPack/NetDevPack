@@ -347,6 +347,21 @@ namespace NetDevPack.Utilities
         {
             return BitConverter.ToString(data).Replace("-", "").ToLower();
         }
-        
+
+        public static string Capitalize(this string value, bool isRestLower)
+        {
+            var spanChars = value.AsSpan();
+            var newSpan = new Span<char>(new char[value.Length]);
+            spanChars.CopyTo(newSpan);
+
+            if (isRestLower)
+            {
+                spanChars.ToLowerInvariant(newSpan);
+            }
+
+            newSpan[0] = char.ToUpper(spanChars[0]);
+
+            return newSpan.ToString();
+        }
     }
 }
