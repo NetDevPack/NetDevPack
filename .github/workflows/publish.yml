@@ -1,6 +1,5 @@
 name: NetDevPack - MASTER Publish
 
-
 on:
   push:
     branches: [ master ]
