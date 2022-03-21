@@ -1,3 +1,17 @@
+# [5.4.0](https://github.com/NetDevPack/NetDevPack/compare/v5.3.2...v5.4.0) (2022-03-21)
+
+
+### Features
+
+* .NET 6 Support ([#23](https://github.com/NetDevPack/NetDevPack/issues/23)) ([7871f67](https://github.com/NetDevPack/NetDevPack/commit/7871f67b25ed450939c6421b8bb1fb57244e776e))
+* Add support to .NET 6 ([902cafc](https://github.com/NetDevPack/NetDevPack/commit/902cafc25e5bd8c0ad1e9a25cf1bfcbcfba22599))
+* Updating to .NET 6 ([50ff135](https://github.com/NetDevPack/NetDevPack/commit/50ff135c5f94bf7b390995ef48327c52c2f8268d))
+* Updating to .NET 6 ([bf266d4](https://github.com/NetDevPack/NetDevPack/commit/bf266d4d9112705128e5d8c06bca00bbcad1238c))
+* updating to .NET 6 ([#25](https://github.com/NetDevPack/NetDevPack/issues/25)) ([94db910](https://github.com/NetDevPack/NetDevPack/commit/94db910cc571fec49b2ca53c641c0dd550f835de))
+* Updating to .NET 6 ([#26](https://github.com/NetDevPack/NetDevPack/issues/26)) ([16879ff](https://github.com/NetDevPack/NetDevPack/commit/16879ff5647411ab4520e15cc72ed9671aa53053))
+* Updating to .NET 6 ([#27](https://github.com/NetDevPack/NetDevPack/issues/27)) ([6f89dfd](https://github.com/NetDevPack/NetDevPack/commit/6f89dfdd65065b4b3e5d378142c757ebb97d7e92))
+* Updating to .NET 6 ([#28](https://github.com/NetDevPack/NetDevPack/issues/28)) ([40f6680](https://github.com/NetDevPack/NetDevPack/commit/40f668057197185aa88608891b4ba001a6a3d7b2))
+
 ## [5.3.2](https://github.com/NetDevPack/NetDevPack/compare/v5.3.1...v5.3.2) (2021-11-16)
 
 
