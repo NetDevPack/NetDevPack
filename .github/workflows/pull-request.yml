@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         
-      - name: Setup .NET 56
+      - name: Setup .NET 6
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 6.0.x
