@@ -1,3 +1,20 @@
+# [6.0.0](https://github.com/NetDevPack/NetDevPack/compare/v5.4.0...v6.0.0) (2022-03-21)
+
+
+### Features
+
+* dotnet 6 ([#30](https://github.com/NetDevPack/NetDevPack/issues/30)) ([8505675](https://github.com/NetDevPack/NetDevPack/commit/8505675fd054cffd186b3d59885eb535751bc3e2))
+
+
+### BREAKING CHANGES
+
+* Update to .NET 6
+
+* feat: dotnet 6
+
+feat: dotnet 6
+* Update to .NET 6
+
 # [5.4.0](https://github.com/NetDevPack/NetDevPack/compare/v5.3.2...v5.4.0) (2022-03-21)
 
 
