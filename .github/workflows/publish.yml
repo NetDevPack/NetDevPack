@@ -56,7 +56,7 @@ jobs:
             @semantic-release/github
             @semantic-release/git
         env:
-          GITHUB_TOKEN: ${{ secrets.TEMP_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate Package
         run: dotnet pack -c Release -o out -p:PackageVersion=${{ steps.semantic.outputs.new_release_version }} -p:RepositoryUrl=${{env.CURRENT_REPO_URL}}
