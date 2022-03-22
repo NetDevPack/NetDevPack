@@ -1,3 +1,47 @@
+# [7.0.0](https://github.com/NetDevPack/NetDevPack/compare/v6.0.0...v7.0.0) (2022-03-22)
+
+
+### Bug Fixes
+
+* MediatR correct version ([#31](https://github.com/NetDevPack/NetDevPack/issues/31)) ([1e0e7b5](https://github.com/NetDevPack/NetDevPack/commit/1e0e7b5bc04aa46f50d0f05ffcb78766b19324b8))
+* MediatR correct version ([#32](https://github.com/NetDevPack/NetDevPack/issues/32)) ([deb8dcf](https://github.com/NetDevPack/NetDevPack/commit/deb8dcf60284bcc789c1b726d82b881b15c98967))
+
+
+### BREAKING CHANGES
+
+* Update to .NET 6
+
+* feat: dotnet 6
+
+feat: dotnet 6
+* Update to .NET 6
+
+* fix: MediatR correct version
+
+fix: MediatR correct version
+
+* fix: MediatR correct version
+
+fix: MediatR correct version
+
+* fix: MediatR correct version
+
+fix: MediatR correct version
+
+* fix: MediatR correct version
+
+fix: MediatR correct version
+* Update to .NET 6
+
+* feat: dotnet 6
+
+feat: dotnet 6
+* Update to .NET 6
+
+* fix: MediatR correct version
+
+fix: MediatR correct version
+
 # [6.0.0](https://github.com/NetDevPack/NetDevPack/compare/v5.4.0...v6.0.0) (2022-03-21)
 
 
