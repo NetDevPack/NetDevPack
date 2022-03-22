@@ -35,6 +35,4 @@
 		</ItemGroup>
 		<Copy SourceFiles="@(_CustomFiles)" DestinationFolder="../../../.git/hooks" />
 	</Target>
-   
-   
 </Project>
