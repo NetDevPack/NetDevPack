@@ -28,4 +28,3 @@ dotnet add package NetDevPack
 
 ## About
 .NET DevPack was developed by [Eduardo Pires](http://eduardopires.net.br) under the [MIT license](LICENSE).
-
