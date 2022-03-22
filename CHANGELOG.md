@@ -1,3 +1,11 @@
+## [6.0.1](https://github.com/NetDevPack/NetDevPack/compare/v6.0.0...v6.0.1) (2022-03-22)
+
+
+### Bug Fixes
+
+* MediatR correct version ([#35](https://github.com/NetDevPack/NetDevPack/issues/35)) ([7c0544c](https://github.com/NetDevPack/NetDevPack/commit/7c0544c495daec28cca5bbb878d5b9ccc8d8c3a9))
+* version ([81024a5](https://github.com/NetDevPack/NetDevPack/commit/81024a59ef255c53953758174dd585ee025cf369))
+
 # [6.0.0](https://github.com/NetDevPack/NetDevPack/compare/v5.4.0...v6.0.0) (2022-03-22)
 
 
