@@ -2,9 +2,6 @@
 using NetDevPack.Utilities;
 using System;
 using System.IO;
-using System.Reflection;
-using System.Xml;
-using NetDevPack.Tests.Specs;
 using NetDevPack.Tests.Utilities.Assets;
 using Xunit;
 
