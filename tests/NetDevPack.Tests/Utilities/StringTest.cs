@@ -1,6 +1,11 @@
 ﻿using FluentAssertions;
 using NetDevPack.Utilities;
 using System;
+using System.IO;
+using System.Reflection;
+using System.Xml;
+using NetDevPack.Tests.Specs;
+using NetDevPack.Tests.Utilities.Assets;
 using Xunit;
 
 namespace NetDevPack.Tests.Utilities
@@ -55,6 +60,22 @@ namespace NetDevPack.Tests.Utilities
         public void Should_Capitalize_String(string content, bool isRestLower, string expected)
         {
             content.Capitalize(isRestLower).Should().Be(expected);
+        }
+
+        [Fact]
+        public void Should_Deserialize_XML_String()
+        {
+            // Arrange
+            var currentDir = Directory.GetCurrentDirectory()
+                .Substring(0, Directory.GetCurrentDirectory().LastIndexOf("bin"));
+            var filePath = Path.Combine(currentDir, "Utilities", "Assets", "person.xml");
+            using StreamReader file = new (filePath);
+            // Act
+            var xmlStr = file.ReadToEnd();
+            var obj = xmlStr.DeserializeXML<Person>();
+            // Assert
+            Assert.NotNull(file);
+            Assert.IsType<Person>(obj);
         }
     }
 }

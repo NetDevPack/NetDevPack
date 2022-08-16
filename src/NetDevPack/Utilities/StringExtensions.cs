@@ -4,6 +4,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Xml.Serialization;
 using static System.String;
 
 
@@ -60,7 +61,6 @@ namespace NetDevPack.Utilities
             }
 
             return path1;
-
         }
 
         public static string AddSpacesToSentence(this string state)
@@ -117,7 +117,7 @@ namespace NetDevPack.Utilities
         }
 
         /// <summary>
-        /// Replace everything to ***, except the first and last char
+        ///     Replace everything to ***, except the first and last char
         /// </summary>
         /// <returns></returns>
         public static string TruncateSensitiveInformation(this ReadOnlySpan<char> part)
@@ -141,14 +141,10 @@ namespace NetDevPack.Utilities
                     s.AsSpan(s.Length - 1).CopyTo(span[^1..]);
                 });
             }
-            else
-            {
-                return Empty;
-            }
 
+            return Empty;
         }
 #else
-
         /// <summary>
         /// Replace everything to ***, except the first and last char
         /// </summary>
@@ -177,8 +173,8 @@ namespace NetDevPack.Utilities
 
 #if NET5_0_OR_GREATER || NETSTANDARD2_1
         /// <summary>
-        /// Truncate e-mail for frontend exibition:
-        /// myemail@microsoft.com -> m*****@m***t.com
+        ///     Truncate e-mail for frontend exibition:
+        ///     myemail@microsoft.com -> m*****@m***t.com
         /// </summary>
         /// <param name="email"></param>
         public static string TruncateEmail(this string email)
@@ -210,7 +206,7 @@ namespace NetDevPack.Utilities
         }
 
         /// <summary>
-        /// Remove áóé etc.
+        ///     Remove áóé etc.
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
@@ -227,17 +223,17 @@ namespace NetDevPack.Utilities
                     finalText[lastIndex++] = c;
                 }
             }
+
             Array.Resize(ref finalText, lastIndex);
 
             return new string(finalText).Normalize(NormalizationForm.FormC);
-
         }
 
 #if NET5_0_OR_GREATER || NETSTANDARD2_1
         /// <summary>
-        /// Turn string into URL dashed style.
-        /// E.g: My custom url title provided by user -> my-custom-url-title-provided-by-user
-        /// Useful to create Url paths and improve SEO.
+        ///     Turn string into URL dashed style.
+        ///     E.g: My custom url title provided by user -> my-custom-url-title-provided-by-user
+        ///     Useful to create Url paths and improve SEO.
         /// </summary>
         public static string Urlize(this string str)
         {
@@ -252,7 +248,6 @@ namespace NetDevPack.Utilities
                 tituloEditado = tituloEditado[..^1];
 
             return tituloEditado;
-
         }
 #else
         /// <summary>
@@ -288,6 +283,7 @@ namespace NetDevPack.Utilities
 
                 onlyNumbers[lastIndex++] = c;
             }
+
             Array.Resize(ref onlyNumbers, lastIndex);
             return new string(onlyNumbers);
         }
@@ -302,6 +298,7 @@ namespace NetDevPack.Utilities
         {
             return Convert.FromBase64String(str);
         }
+
         public static string ToBase64(this string str, Encoding enc = null)
         {
             return ToBase64((enc ?? Encoding.Default).GetBytes(str));
@@ -311,16 +308,17 @@ namespace NetDevPack.Utilities
         {
             return Convert.ToBase64String(data);
         }
+
         public static byte[] FromPlainHexDumpStyleToByteArray(this string hex)
         {
             if (hex.Length % 2 == 1)
                 throw new Exception("The binary key cannot have an odd number of digits");
 
-            byte[] arr = new byte[hex.Length >> 1];
+            var arr = new byte[hex.Length >> 1];
 
-            for (int i = 0; i < hex.Length >> 1; ++i)
+            for (var i = 0; i < hex.Length >> 1; ++i)
             {
-                arr[i] = (byte)((GetHexVal(hex[i << 1]) << 4) + (GetHexVal(hex[(i << 1) + 1])));
+                arr[i] = (byte) ((GetHexVal(hex[i << 1]) << 4) + GetHexVal(hex[(i << 1) + 1]));
             }
 
             return arr;
@@ -328,18 +326,18 @@ namespace NetDevPack.Utilities
 
         private static int GetHexVal(char hex)
         {
-            int val = (int)hex;
+            int val = hex;
             //For uppercase A-F letters:
             //return val - (val < 58 ? 48 : 55);
             //For lowercase a-f letters:
             //return val - (val < 58 ? 48 : 87);
             //Or the two combined, but a bit slower:
-            return val - (val < 58 ? 48 : (val < 97 ? 55 : 87));
+            return val - (val < 58 ? 48 : val < 97 ? 55 : 87);
         }
 
         /// <summary>
-        /// Equivalent to xxd -p
-        /// see: https://linux.die.net/man/1/xxd
+        ///     Equivalent to xxd -p
+        ///     see: https://linux.die.net/man/1/xxd
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
@@ -362,6 +360,24 @@ namespace NetDevPack.Utilities
             newSpan[0] = char.ToUpper(spanChars[0]);
 
             return newSpan.ToString();
+        }
+
+        /// <summary>
+        ///     Deserializes an XML string.
+        /// </summary>
+        /// <param name="str"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static T? DeserializeXML<T>(this string str)
+        {
+            var returnValue = default(T);
+
+            XmlSerializer xSerializer = new(typeof(T));
+            using var strReader = new StringReader(str);
+            var result = xSerializer.Deserialize(strReader);
+            if (result is T type) returnValue = type;
+
+            return returnValue;
         }
     }
 }
