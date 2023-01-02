@@ -1,3 +1,10 @@
+# [6.1.0](https://github.com/NetDevPack/NetDevPack/compare/v6.0.1...v6.1.0) (2023-01-02)
+
+
+### Features
+
+* dotnet version matrix ([9b0ecde](https://github.com/NetDevPack/NetDevPack/commit/9b0ecdef7e7ff264455a6228321d428ac3ad6474))
+
 ## [6.0.1](https://github.com/NetDevPack/NetDevPack/compare/v6.0.0...v6.0.1) (2022-03-22)
 
 
