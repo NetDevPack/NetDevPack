@@ -288,8 +288,7 @@ namespace NetDevPack.Utilities
 
                 onlyNumbers[lastIndex++] = c;
             }
-            Array.Resize(ref onlyNumbers, lastIndex);
-            return new string(onlyNumbers);
+            return new string(onlyNumbers, 0, lastIndex);
         }
 
 
