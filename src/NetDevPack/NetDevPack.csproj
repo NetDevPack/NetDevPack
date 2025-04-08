@@ -16,7 +16,7 @@
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>NetDevPack, CQRS, DDD, Specification</PackageTags>
-		<Version>8.0.1</Version>
+		<Version>8.0.2</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
