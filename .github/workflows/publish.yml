@@ -24,25 +24,6 @@ jobs:
             6.0.x
             5.0.x
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
-      - name: Install semantic-release and plugins
-        run: |
-          npm init -y
-          npm install semantic-release@18 \
-            @semantic-release/changelog \
-            @semantic-release/github \
-            @semantic-release/git
-
-      - name: Run semantic-release
-        id: semantic
-        run: npx semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Restore dependencies
         run: dotnet restore
 
@@ -52,12 +33,23 @@ jobs:
       - name: Test
         run: dotnet test
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Semantic Release + Plugins
+        run: |
+          npm init -y
+          npm install semantic-release @semantic-release/changelog @semantic-release/github @semantic-release/git --legacy-peer-deps
+
+      - name: Run Semantic Release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Generate Package
-        run: dotnet pack -c Release -o out \
-          -p:PackageVersion=${{ steps.semantic.outputs.new_release_version }} \
-          -p:RepositoryUrl=${{ env.CURRENT_REPO_URL }}
+        run: dotnet pack -c Release -o out -p:RepositoryUrl=${{env.CURRENT_REPO_URL}}
 
       - name: Publish the package to nuget.org
-        run: dotnet nuget push ./out/*.nupkg --skip-duplicate --no-symbols true \
-          -k ${{ secrets.NUGET_AUTH_TOKEN }} \
-          -s https://api.nuget.org/v3/index.json
+        run: dotnet nuget push ./out/*.nupkg --skip-duplicate --no-symbols true -k ${{ secrets.NUGET_AUTH_TOKEN }} -s https://api.nuget.org/v3/index.json
