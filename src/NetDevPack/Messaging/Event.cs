@@ -1,5 +1,5 @@
-﻿using System;
-using MediatR;
+﻿using NetDevPack.SimpleMediator.Core.Interfaces;
+using System;
 
 namespace NetDevPack.Messaging
 {
