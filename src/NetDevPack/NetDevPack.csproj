@@ -3,29 +3,35 @@
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.1</TargetFrameworks>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-		<Authors>Eduardo Pires</Authors>
 		<Company>desenvolvedor.io</Company>
 		<Description>.NET DevPack is a set of common implementations to help you implementing DDD, CQRS, Specification Patterns and another facilities</Description>
 		<PackageDescription>.NET DevPack is a set of common implementations to help you implementing DDD, CQRS, Specification Patterns and another facilities</PackageDescription>
-		<PackageProjectUrl>https://github.com/EduardoPires/NetDevPack</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/NetDevPack/NetDevPack/</PackageProjectUrl>
 		<PackageId>NetDevPack</PackageId>
 		<PackageIcon>IconNuget.png</PackageIcon>
-		<RepositoryUrl>https://github.com/EduardoPires/NetDevPack</RepositoryUrl>
+		<RepositoryUrl>https://github.com/NetDevPack/NetDevPack/</RepositoryUrl>
 		<Authors>EduardoPires</Authors>
 		<RepositoryType>Public</RepositoryType>
+		<Title>NetDevPack</Title>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>8.0.0</Version>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>NetDevPack, CQRS, DDD, Specification</PackageTags>
+		<Version>8.0.1</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="FluentValidation" Version="11.11.0" />
-		<PackageReference Include="Netdevpack.simplemediator" Version="1.1.0" />
+		<PackageReference Include="NetDevPack.SimpleMediator" Version="1.1.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<None Include="..\..\assets\IconNuget.png">
 			<Pack>True</Pack>
 			<PackagePath></PackagePath>
+		</None>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
 		</None>
 	</ItemGroup>
 
