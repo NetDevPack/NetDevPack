@@ -1,8 +1,8 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using FluentValidation.Results;
-using MediatR;
 using NetDevPack.Messaging;
+using NetDevPack.SimpleMediator.Core.Interfaces;
 
 namespace NetDevPack.Mediator
 {
