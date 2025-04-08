@@ -1,0 +1,21 @@
+{
+  "name": "netdevpack",
+  "version": "1.0.0",
+  "description": "<img src=\"https://repository-images.githubusercontent.com/268701472/8bf84980-a6ce-11ea-83da-e2133c5a3a7a\" alt=\".NET DevPack\" width=\"300px\" />",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "semantic-release": "^24.2.3"
+  }
+}

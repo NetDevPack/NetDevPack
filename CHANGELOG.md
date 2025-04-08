@@ -1,3 +1,10 @@
+## [6.1.1](https://github.com/NetDevPack/NetDevPack/compare/v6.1.0...v6.1.1) (2025-04-08)
+
+
+### Bug Fixes
+
+* updating MediatR to SimpleMediator ([ab59846](https://github.com/NetDevPack/NetDevPack/commit/ab59846df179af26f523416fd4e598374fadaf7c))
+
 # [6.1.0](https://github.com/NetDevPack/NetDevPack/compare/v6.0.1...v6.1.0) (2023-01-02)
 
 
