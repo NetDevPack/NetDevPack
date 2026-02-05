@@ -1,6 +1,6 @@
 ﻿using System;
 using FluentValidation.Results;
-using MediatR;
+using NetDevPack.SimpleMediator.Core.Interfaces;
 
 namespace NetDevPack.Messaging
 {
