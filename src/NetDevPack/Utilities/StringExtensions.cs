@@ -198,7 +198,7 @@ namespace NetDevPack.Utilities
 #endif
         public static string ToSha256(this string value)
         {
-            var crypt = new SHA256Managed();
+            using var crypt = SHA256.Create();
             var hash = new StringBuilder();
             byte[] crypto = crypt.ComputeHash(Encoding.ASCII.GetBytes(value));
             foreach (byte theByte in crypto)

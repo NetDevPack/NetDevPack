@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.1</TargetFrameworks>
+		<TargetFrameworks>netstandard2.1;net8.0;net10.0</TargetFrameworks>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<Authors>Eduardo Pires</Authors>
 		<Company>desenvolvedor.io</Company>
@@ -18,8 +18,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="FluentValidation" Version="10.4.0" />
-		<PackageReference Include="mediatr" Version="10.0.1" />
+		<PackageReference Include="FluentValidation" Version="11.12.0" />
+		<PackageReference Include="mediatr" Version="12.5.0" />
 	</ItemGroup>
 
 	<ItemGroup>
