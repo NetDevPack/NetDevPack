@@ -1,3 +1,20 @@
+# [7.0.0](https://github.com/NetDevPack/NetDevPack/compare/v6.1.1...v7.0.0) (2026-02-05)
+
+
+### Bug Fixes
+
+* github actions ([b396f20](https://github.com/NetDevPack/NetDevPack/commit/b396f201efe7be0930737ace587243a3358e989d))
+
+
+### Features
+
+* **runtime:** upgrade project to latest .NET version ([7cb9cee](https://github.com/NetDevPack/NetDevPack/commit/7cb9cee5e060732f8139cf1cf0d0ca7a9bbdea73))
+
+
+### BREAKING CHANGES
+
+* **runtime:** dropped support for non-LTS .NET versions
+
 ## [6.1.1](https://github.com/NetDevPack/NetDevPack/compare/v6.1.0...v6.1.1) (2025-04-08)
 
 
