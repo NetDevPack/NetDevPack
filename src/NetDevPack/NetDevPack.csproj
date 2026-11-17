@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.1</TargetFrameworks>
+		<TargetFrameworks>net10.0</TargetFrameworks>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<Company>desenvolvedor.io</Company>
 		<Description>.NET DevPack is a set of common implementations to help you implementing DDD, CQRS, Specification Patterns and another facilities</Description>
@@ -20,8 +20,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="FluentValidation" Version="11.11.0" />
-		<PackageReference Include="NetDevPack.SimpleMediator" Version="1.1.0" />
+		<PackageReference Include="FluentValidation" />
+		<PackageReference Include="NetDevPack.SimpleMediator" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -35,11 +35,11 @@
 		</None>
 	</ItemGroup>
 
-	<Target Name="CopyHook" AfterTargets="AfterBuild" Condition=" '$(Configuration)' == 'Debug' ">
+	<Target Name="CopyHook" AfterTargets="AfterBuild" Condition=" '$(Configuration)' == 'Debug' And '$(CI)' != 'true' ">
 		<ItemGroup>
 			<_CustomFiles Include="../../.github/hooks/commit-msg" />
 		</ItemGroup>
-		<Copy SourceFiles="@(_CustomFiles)" DestinationFolder="../../../.git/hooks" />
+		<Copy SourceFiles="@(_CustomFiles)" DestinationFolder="$(MSBuildThisFileDirectory)../../.git/hooks" Condition="Exists('$(MSBuildThisFileDirectory)../../.git')" />
 	</Target>
 
 </Project>

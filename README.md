@@ -99,10 +99,16 @@ For a full implementation example, check [Equinox Project](https://github.com/Ed
 
 ## Compatibility
 
-Supports:
-- ✅ .NET Standard 2.1  
-- ✅ .NET 5 through 9 (including latest versions)  
-- ⚠️ Legacy support for .NET Core 3.1 and older (with limitations)
-  
+| NetDevPack | Target framework |
+| ---------- | ---------------- |
+| 9.x        | .NET 10 (LTS)    |
+| 8.x        | .NET Standard 2.1 |
+
+### Upgrading from 8.x to 9.x
+
+- The package now targets **.NET 10** only. Stay on 8.x if you need .NET Standard 2.1.
+- **FluentValidation 12**. See the [FluentValidation 12 upgrade guide](https://docs.fluentvalidation.net/en/latest/upgrading-to-12.html).
+- **NetDevPack.SimpleMediator 1.2**: `IMediator`, `IRequest<T>`, `INotification` and the handler interfaces moved from `NetDevPack.SimpleMediator.Core.Interfaces` to the `NetDevPack.SimpleMediator` namespace. Replace `using NetDevPack.SimpleMediator.Core.Interfaces;` with `using NetDevPack.SimpleMediator;`.
+
 ## About
 .NET DevPack was developed by [Eduardo Pires](http://eduardopires.net.br) under the [MIT license](LICENSE).

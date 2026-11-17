@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using FluentValidation.Results;
 using NetDevPack.Messaging;
-using NetDevPack.SimpleMediator.Core.Interfaces;
+using NetDevPack.SimpleMediator;
 
 namespace NetDevPack.Mediator
 {

@@ -85,11 +85,7 @@ namespace NetDevPack.Utilities
 
                 chars[j++] = text[i];
             }
-#if NETSTANDARD2_0
-            return new string(chars);
-#else
             return new string(chars.AsSpan());
-#endif
         }
 
         private static int HowManyCapitalizedChars(char[] state)
@@ -110,7 +106,6 @@ namespace NetDevPack.Utilities
         }
 
 
-#if NET5_0_OR_GREATER || NETSTANDARD2_1
         public static string TruncateSensitiveInformation(this string part)
         {
             return part.AsSpan().TruncateSensitiveInformation();
@@ -147,35 +142,7 @@ namespace NetDevPack.Utilities
             }
 
         }
-#else
 
-        /// <summary>
-        /// Replace everything to ***, except the first and last char
-        /// </summary>
-        /// <returns></returns>
-        public static string TruncateSensitiveInformation(this string part)
-        {
-
-            if (part.IsPresent())
-            {
-                var truncatedString = new char[part.Length];
-                truncatedString[0] = part[0];
-
-
-                for (var i = 1; i < part.Length - 1; i++)
-                {
-                    truncatedString[i] = sensitive;
-                }
-                truncatedString[part.Length - 1] = part[part.Length - 1];
-
-                return new string(truncatedString);
-            }
-
-            return string.Empty;
-        }
-#endif
-
-#if NET5_0_OR_GREATER || NETSTANDARD2_1
         /// <summary>
         /// Truncate e-mail for frontend exibition:
         /// myemail@microsoft.com -> m*****@m***t.com
@@ -195,7 +162,6 @@ namespace NetDevPack.Utilities
             return finalSpan.ToString();
         }
 
-#endif
         public static string ToSha256(this string value)
         {
             using var crypt = SHA256.Create();
@@ -233,7 +199,6 @@ namespace NetDevPack.Utilities
 
         }
 
-#if NET5_0_OR_GREATER || NETSTANDARD2_1
         /// <summary>
         /// Turn string into URL dashed style.
         /// E.g: My custom url title provided by user -> my-custom-url-title-provided-by-user
@@ -254,28 +219,6 @@ namespace NetDevPack.Utilities
             return tituloEditado;
 
         }
-#else
-        /// <summary>
-        /// Turn string into URL dashed style.
-        /// E.g: My custom url title provided by user -> my-custom-url-title-provided-by-user
-        /// Useful to create Url paths and improve SEO.
-        /// </summary>
-        public static string Urlize(this string str)
-        {
-            var tituloEditado = str.Trim().ToLower().RemoveDiacritics();
-
-            tituloEditado = UrlizeRegex.Replace(tituloEditado, "-");
-
-            if (tituloEditado.StartsWith("-"))
-                tituloEditado = tituloEditado.Substring(1);
-
-            if (tituloEditado.EndsWith("-"))
-                tituloEditado = tituloEditado.Substring(0, tituloEditado.Length - 1);
-
-            return tituloEditado;
-
-        }
-#endif
 
         public static string OnlyNumbers(this string str)
         {

@@ -1,0 +1,22 @@
+﻿<Project>
+  <!--
+    Central Package Management: every version lives here, csproj files only declare <PackageReference Include="..." />.
+    Microsoft.* packages that ship with .NET follow the target framework (net10.0 -> 10.0.x).
+  -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageVersion Include="FluentValidation" Version="12.2.0" />
+    <PackageVersion Include="NetDevPack.SimpleMediator" Version="1.2.0" />
+
+    <!-- Benchmarks -->
+    <PackageVersion Include="BenchmarkDotNet" Version="0.15.8" />
+
+    <!-- Tests -->
+    <PackageVersion Include="AwesomeAssertions" Version="9.6.0" />
+    <PackageVersion Include="xunit.v3" Version="4.0.3" />
+  </ItemGroup>
+</Project>
