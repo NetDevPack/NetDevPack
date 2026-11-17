@@ -1,4 +1,4 @@
-﻿using NetDevPack.SimpleMediator.Core.Interfaces;
+﻿using NetDevPack.SimpleMediator;
 using System;
 
 namespace NetDevPack.Messaging

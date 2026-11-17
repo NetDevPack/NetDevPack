@@ -1,4 +1,4 @@
-﻿using FluentAssertions;
+﻿using AwesomeAssertions;
 using NetDevPack.Utilities;
 using System;
 using Xunit;

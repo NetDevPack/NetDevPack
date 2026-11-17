@@ -1,0 +1,11 @@
+﻿<Project>
+  <!-- Shared settings for every project under this repository -->
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <!-- Fail the build when a dependency has a known vulnerability (NuGet Audit) -->
+    <NuGetAudit>true</NuGetAudit>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <WarningsAsErrors>$(WarningsAsErrors);NU1901;NU1902;NU1903;NU1904</WarningsAsErrors>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+</Project>
