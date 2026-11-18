@@ -1,17 +1,3 @@
-# [8.0.0](https://github.com/NetDevPack/NetDevPack/compare/v7.0.0...v8.0.0) (2026-11-17)
-
-
-* feat!: target .NET 10 and update dependencies ([#65](https://github.com/NetDevPack/NetDevPack/issues/65)) ([47616c8](https://github.com/NetDevPack/NetDevPack/commit/47616c8f566b847c4d4168f2d2319882490ecf68))
-
-
-### BREAKING CHANGES
-
-* NetDevPack now targets .NET 10 only. NetDevPack.SimpleMediator 1.2 moved
-IMediator, IRequest<T>, INotification and handlers from NetDevPack.SimpleMediator.Core.Interfaces
-to the NetDevPack.SimpleMediator namespace. FluentValidation was upgraded to 12.
-
-Co-authored-by: Claude Opus 5.5 <noreply@anthropic.com>
-
 # [7.0.0](https://github.com/NetDevPack/NetDevPack/compare/v6.1.1...v7.0.0) (2026-02-05)
 
 
